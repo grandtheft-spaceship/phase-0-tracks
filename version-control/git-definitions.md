@@ -2,6 +2,8 @@
 
 **Instructions: ** Define each of the following Git concepts.
 
+*# #RELEASE THE KRAKEN!!!*
+
 * What is version control?  Why is it useful?
     - Version Control is a system that programmers use to track/make changes to code. It allows programmers to view the total history of the code and even gives programmers the ability to go back in time to certain save points of their code. Version Control is useful because it allows programmers access to the entire timeline of their code; allowing them to view every single change made. This is helpful in case a programmer needs to go back to a certain save point of their code and rework their code from any given save point.
 * What is a branch and why would you use one?
