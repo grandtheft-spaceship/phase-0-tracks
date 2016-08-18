@@ -13,3 +13,8 @@ img[alt*="Hat"] {
 	left: 40%;
 }
 
+img[alt*="Glasses"] {
+	position: absolute;
+	top: 45.5%;
+	left: 43.5%;
+}
