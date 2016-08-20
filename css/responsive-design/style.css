@@ -48,6 +48,29 @@ main {
   display: inline-block;
 }
 
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  section#external-links {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  main {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  * {
+    font-size: 1em;
+  }
+}
+
 
 
 
