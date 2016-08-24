@@ -1,3 +1,51 @@
-* {
-	background-color: orange;
+header {
+  background-image: url("https://i.ytimg.com/vi/TInfxe7c7yA/maxresdefault.jpg");
+  border:1px dotted blue;
+  text-align: center;
+  margin-bottom: 15px;
+  color: white;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff2d95, 0 0 30px #ff2d95, 0 0 40px #ff2d95, 0 0 50px #ff2d95, 0 0 75px #ff2d95;
+}
+
+footer {
+  background-color: green;
+  border: 1px solid yellow;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.column-1 {
+  background-color: grey;
+  border: 1px solid black;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  max-width: 30%;
+  margin: 0 5%;
+  padding: 10px;
+}
+
+.column-1:hover {
+  color: skyblue;
+}
+
+.column-2 {
+  background-color: orange;
+  border: 1px solid black;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  max-width: 30%;
+  height: 1625px;
+  margin: 0  5%;
+  padding: 10px;
+}
+
+section a {
+  color: red;
+}
+
+section a:visted {
+  color:green;
 }
