@@ -1,0 +1,14 @@
+RELEASE 0
+
+Algorithm For Using an Elevator
+
+1. Scan the room and look for elevator landing
+2. Walk towards elevator landing
+3. Locate the elevator button and press it, then release
+4. When an elevator door opens, enter the elevator
+5. Scan the elevator and locate the button-pannel
+6. Press the button that is labeled with the same number as the floor you want to go to;
+	* if you do not have a floor number you wish to go to, exit the elevator and get one.
+7. Standby while elevator moves to the desired floor.
+8. When the elevator arrives at the desired floor, exit the elevator and walk to your desired location.
+
