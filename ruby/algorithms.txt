@@ -12,3 +12,20 @@ Algorithm For Using an Elevator
 7. Standby while elevator moves to the desired floor.
 8. When the elevator arrives at the desired floor, exit the elevator and walk to your desired location.
 
+RELEASE 1
+
+Algorithm for Changing a Diaper
+
+1. Locate child. 
+2. Check the child's diaper. If child's diaper is clean, do nothing. If it is soiled, lay the child down.
+3. Locate and retrieve a new diaper, baby wipes, and baby powder. Set them down next to the child.
+4. Take of the child's bottoms.
+5. Take out 3-5 baby wipes and set them down next to new diaper.
+6. Open new diaper and spread a thin layer of baby powder on the inside.
+6. Proceed to open the child's dirty diaper.
+7. Begin wiping the waste off the child's exposed areas. Do not stop until exposed area has been 100% cleaned.
+8. Put the dirty baby wipes inside of the dirty diaper and fold the diaper into a ball, using the adhesive tabs to close it.
+8. Put new diaper on child and secure it.
+10. Put child's bottoms back on.
+11. High-five the child and smile.
+
