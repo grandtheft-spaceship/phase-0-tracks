@@ -1,10 +1,10 @@
 puts "Hello! Welcome to our Hamster Sanctuary! Does your hamster have a name? Please answer (y/N)"
 
-answer = gets.chomp
+name = gets.chomp
 
-if answer == "y"
+if name == "y"
 	puts "Great!"
-else answer == "N"
+else name == "N"
 	puts "Ok. I'll name him/her Mickey!"
 end
 
@@ -49,5 +49,12 @@ elsif age > 2
 else
 	puts nil
 end
+
+puts "Hamster Summary"
+puts "Does the hamster have a name? #{name}."
+puts "How loud is the hamster on the scale from 1 -10? #{volume}."
+puts "Fur color : #{fur}."
+puts "Good for adoption? #{answer}."
+puts "Age:#{age}."
 
 
