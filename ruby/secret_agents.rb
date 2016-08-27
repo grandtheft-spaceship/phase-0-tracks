@@ -1,8 +1,5 @@
 # Release 2: Build an Encryption Program
 	
-rescue Exception => e
-	
-end
 # Pseudocode for "Encrypt"
 
 # 1. Input Password
