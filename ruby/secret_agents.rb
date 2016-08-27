@@ -50,10 +50,11 @@ def decrypt(password)
 end
 
 
-encrypt("abc")
-encrypt("zed")
-decrypt("bcd")
-decrypt("afe")
+ decrypt(encrypt("swordfish"))
+
+# Release 4: For us, the nested method call does not work. We are not entirely sure why because according to the order of operations, it should run the encrypt method first and apply that string as the argument needed for the decrypt method. We're getting a 'NoMethodError' because it's saying that it cannot call the .length method on the argument that is being passed to the decrypt method.
+
+
 
 
 
