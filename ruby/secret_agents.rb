@@ -21,8 +21,8 @@ def encrypt(password)
 
 		index += 1
 	end
-	puts password
-end
+	return password 
+end 
 
 # Pseudocode for "Decrypt"
 
@@ -46,13 +46,59 @@ def decrypt(password)
 
 		index += 1
 	end
-	puts password
+	return password
 end
 
+# encrypt("abc")
+# encrypt("zed")
+# decrypt("bcd")
+# decrypt("afe")
 
- decrypt(encrypt("swordfish"))
+
+# decrypt(encrypt("swordfish"))
 
 # Release 4: For us, the nested method call does not work. We are not entirely sure why because according to the order of operations, it should run the encrypt method first and apply that string as the argument needed for the decrypt method. We're getting a 'NoMethodError' because it's saying that it cannot call the .length method on the argument that is being passed to the decrypt method.
+
+# Release 5: Driver Code
+
+puts "Hello! Welcome to MIB-Interface. Would you like to encrypt or decrypt a password?"
+
+reply = gets.chomp
+reply = reply.downcase
+
+	if reply == "encrypt"
+		puts "Please enter password"
+		encrypt_password = gets.chomp
+
+		password = encrypt(encrypt_password)
+
+		puts "Encrypted Password: #{password}"
+	elsif reply == "decrypt"
+		puts "Please enter password"
+		decrypt_password = gets.chomp
+
+		password = decrypt(decrypt_password)
+
+		puts "Decrypted Password: #{password}"
+	else
+		puts "Please enter encrypt or decrypt"
+	end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
