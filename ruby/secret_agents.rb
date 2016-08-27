@@ -1,6 +1,4 @@
 # Release 2: Build an Encryption Program
-
-=begin
 	
 rescue Exception => e
 	
@@ -25,8 +23,6 @@ while index < password.length
 end
 
 puts password
-
-=end
 
 # Pseudocode for "Decrypt"
 
