@@ -66,22 +66,29 @@ puts "Hello! Welcome to MIB-Interface. Would you like to encrypt or decrypt a pa
 reply = gets.chomp
 reply = reply.downcase
 
+	until reply == "encrypt" || reply == "decrypt"
+		puts "Please enter 'encrypt' or 'decrypt' only"
+
+		reply = gets.chomp
+		reply = reply.downcase
+	end
+
 	if reply == "encrypt"
 		puts "Please enter password"
 		encrypt_password = gets.chomp
+		encrypt_password = encrypt_password.downcase
 
 		password = encrypt(encrypt_password)
 
 		puts "Encrypted Password: #{password}"
-	elsif reply == "decrypt"
+	else reply == "decrypt"
 		puts "Please enter password"
 		decrypt_password = gets.chomp
+		decrypt_password = decrypt_password.downcase
 
 		password = decrypt(decrypt_password)
 
 		puts "Decrypted Password: #{password}"
-	else
-		puts "Please enter encrypt or decrypt"
 	end
 
 
