@@ -10,6 +10,16 @@ modified_letters = letters.map do |letter|
 end
 
 puts "After .map call:"
+puts letters
+
+# or you can use a bang!
+
+letters.map! do |letter|
+  puts letter
+  letter.next
+end
+
+puts "After .map! call:"
 p letters
 p modified_letters
 
