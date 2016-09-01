@@ -1,4 +1,4 @@
-=begin
+
 def simple_search(array, integer)
 	index = 0
 
@@ -18,10 +18,10 @@ array = [1, 3, 4, 5]
 
 simple_search(array, 2)
 simple_search(array, 4)
-=end
 
 
-=begin
+
+
 def fib(num)
 	fib_array = [0, 1]
 
@@ -41,7 +41,7 @@ end
 
 fib(6)
 fib(100)
-=end 
+
 
 
 # Bubble Sort Algorithm
