@@ -84,6 +84,33 @@ p "New Alias, Stage Two: #{alias_stage_two}"
 
 puts "....................................."
 
+puts "Would you like to continue creating aliases?(Please respond yes/NO)"
+more_aliases = gets.chomp
+
+if more_aliases == 'yes'
+  puts "Please enter full names and type 'quit' when you are done"
+  loop do
+    puts "Please enter your first and last name..."
+    real_name = gets.chomp
+
+    if real_name == "quit"
+      break
+    end
+        
+    alias_stage_one = alias_first_stage(real_name)
+    puts "....................................."
+
+    p "New Alias, Stage One: #{alias_stage_one}"
+
+    puts "....................................."
+    alias_stage_two = alias_second_stage(alias_stage_one)
+
+    p "New Alias, Stage Two: #{alias_stage_two}"
+  end
+else
+  puts "Ok!, have a good day!"
+end
+
 =begin
 def next_vowel(name)
   name_letters = name.downcase.split("")
