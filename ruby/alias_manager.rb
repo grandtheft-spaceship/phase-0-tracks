@@ -129,47 +129,6 @@ end
 
 
 
-=begin
-def next_vowel(name)
-  name_letters = name.downcase.split("")
-  vowels = ["a", "e", "i", "o", "u"]
-  index = 0
-
-  for letter in name_letters do
-    for vowel in vowels do
-      if letter == vowel
-        name_letters[index] = vowels[index+1]
-      end
-      index +=1
-    end 
-  end
-  name = name_letters.join
-
-  p name
-end
-=end
-
-=begin
-def next_vowel(name)
-  name_letters = name.downcase.split("")
-  vowels = ["a", "e", "i", "o", "u"]
-  index = 0
-
-  for letter in name_letters do 
-    if letter == vowels[index]
-      name_letters[index] = vowels[index+1]
-    end
-    index += 1
-  end
-  name = name_letters.join
-
-  p name
-end
-
-next_vowel("JOHN")
-=end
-
-
 
 
 
