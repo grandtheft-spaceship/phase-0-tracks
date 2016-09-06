@@ -21,3 +21,18 @@ Catch
 Eat
 
 =end
+
+class Puppy
+
+end
+
+p Puppy.methods
+Duchess = Puppy.new
+Fido = Puppy.new
+Spot = Puppy.new
+
+p Spot.class
+p Duchess == Fido
+p Fido.instance_of?(Array)
+p Fido.instance_of?(Puppy)
+# p Spot.play_dead
