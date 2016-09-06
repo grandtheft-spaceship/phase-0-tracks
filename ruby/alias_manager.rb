@@ -89,9 +89,13 @@ more_aliases = gets.chomp
 
 if more_aliases == 'yes'
   puts "Please enter full names and type 'quit' when you are done"
+  real_name_array = []
+  alias_array = []
+
   loop do
     puts "Please enter your first and last name..."
     real_name = gets.chomp
+    real_name_array << real_name
 
     if real_name == "quit"
       break
@@ -106,10 +110,24 @@ if more_aliases == 'yes'
     alias_stage_two = alias_second_stage(alias_stage_one)
 
     p "New Alias, Stage Two: #{alias_stage_two}"
+
+    alias_array << alias_stage_two
   end
 else
   puts "Ok!, have a good day!"
 end
+
+index = 0
+length = alias_array.length
+
+while index < length
+  puts "New Agent Information:"
+  puts "#{real_name_array[index]} aka #{alias_array[index]}"
+
+  index += 1
+end
+
+
 
 =begin
 def next_vowel(name)
