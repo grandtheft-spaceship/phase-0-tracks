@@ -5,6 +5,8 @@ class Santa
     @ethnicity = ethnicity
     @orientation = orientation
     @religion = religion
+    @age = 0
+    @reinder_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
   end
 
   def speak
