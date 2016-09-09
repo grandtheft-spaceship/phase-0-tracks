@@ -18,7 +18,7 @@ class Santa
   end
 
   def celebrate_birthday
-    @new_age = @age + 1
+    @age = @age + 1
   end
 
   def get_mad_at(name)
@@ -56,10 +56,25 @@ end
 puts "All Santas have been created! Plesae verify correct information:"
 
 all_santas.each_with_index do |santa_num, index|
+  puts "....................................."
+
   puts "Santa Number: #{index + 1}"
   puts "Age: #{santa_num.age}"
   puts "Ethnicity: #{santa_num.ethnicity}"
+  puts "Gender: #{santa_num.gender=("Female")}"
+
+  puts "....................................."
 end
+
+all_santas[2].celebrate_birthday
+
+puts "Special Announcement! Today is Santa Number: 3's birthday! She is now #{all_santas[2].age} Winter-Solstice old!"
+
+puts "....................................."
+
+puts "*Santa Number: 3 goes outside to watch the Northern Lights and finds Rudolph eating her birthday cake!!! "
+
+puts "Santa Number: 3, New Reindeer Ranking Order: #{all_santas[2].get_mad_at("Rudolph")}"
 
 
 
