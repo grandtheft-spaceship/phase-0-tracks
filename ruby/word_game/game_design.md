@@ -11,7 +11,7 @@
 
 * The user should get a congratulatory message if they win, and a taunting message if they lose. 
 
-#PseudoCode
+#PSEUDOCODE
 
 * Create a game class; initializes with empty array to store the mystery word
 * Methods:
