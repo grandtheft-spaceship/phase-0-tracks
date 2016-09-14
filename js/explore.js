@@ -15,4 +15,7 @@ function reverseString(string) {
   return reversed
 }
 
+var reverseStore = reverseString("hello");
+
+console.log(reverseStore);
 
