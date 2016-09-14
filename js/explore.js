@@ -6,5 +6,13 @@
 // 4. Starting with the largest index, push the corresponding character into the empty string
 // 5. Return the reversed-string 
 
+var reversed = "";
+
+function reverseString(string) {
+  for (var reverseIndex = string.length; reverseIndex > 0; reverseIndex--) {
+    reversed = reversed + string[reverseIndex-1];
+  }
+  return reversed
+}
 
 
