@@ -17,5 +17,4 @@ function reverseString(string) {
 
 var reverseStore = reverseString("hello");
 
-console.log(reverseStore);
-
+if ( 1 == 1) console.log(reverseStore);
