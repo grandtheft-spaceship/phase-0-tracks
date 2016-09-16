@@ -15,3 +15,17 @@ for (var x = 0; x < names.length; x++) {
 }
 
 console.log(horses);
+
+function Car(make, model, color) {
+  this.make = make;
+  this.model = model;
+  this.color = color;
+
+  this.takeOff = function() {
+    console.log("0-60 in 3 seconds!");
+  };
+}
+
+var newCar = new Car("Honda", "Civic", "white");
+console.log(newCar);
+newCar.takeOff();
