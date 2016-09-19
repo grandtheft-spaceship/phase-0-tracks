@@ -1,30 +1,53 @@
+// RELEASE 2: Generate Random Test Data
+
+// 1. Define a methods that takes an integer for length, and builds and returns an array of strings of the given length.
+// 2. Words should be randomly varying length; with a minimum of 1 letter and a maximum of 10 letters.
+
+var randomArray = [];
+var randomWord = "";
+var alphabet = "abcdefghijklmnopqrstuvwxyz";
+var stringLength = Math.floor(Math.random() * 9) + 1;
+var newWord = "";
+
+function randomList(length) {
+  for (index = 0; index < length; index++) {
+    for (index = 0; index < stringLength; index++) {
+      randomWord += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+    }
+    randomArray.push(randomWord);
+  }
+  return randomArray;
+}
+
+randomList(10);
+
 // RELEASE 1: Find a Key-Value Match
 
 // 1. Define a method that takes two objects and checks to see if the objects share at least one key-value pair
 // 2. Method will return true if there is a match; false if there is not match
 
-var result = true;
+// var result = true;
 
-function matchingPair(object1, object2) {
-  keys1 = Object.keys(object1);
-  keys2 = Object.keys(object2);
+// function matchingPair(object1, object2) {
+//   keys1 = Object.keys(object1);
+//   keys2 = Object.keys(object2);
 
-  for (index = 0; index < keys1.length; index++) {
-    if (keys1[index] == keys2[index] && object1[keys1[index]] == object2[keys2[index]]) {
-      result = true;
-    } else {
-      result = false;
-    }
-  }
-  console.log(result);
-}
+//   for (index = 0; index < keys1.length; index++) {
+//     if (keys1[index] == keys2[index] && object1[keys1[index]] == object2[keys2[index]]) {
+//       result = true;
+//     } else {
+//       result = false;
+//     }
+//   }
+//   console.log(result);
+// }
 
-var cash = {ones: 5, fives: 2, tens: 1, twenties: 3, hundreds: 1};
-var pockets = {chapstick: 1, wallet: 1, keys: 5, pens: 2, hundreds: 1};
-var backpack = {books: 3, devices: 1, pencils: 2, notebooks: 3, binders: 1}
+// var cash = {ones: 5, fives: 2, tens: 1, twenties: 3, hundreds: 1};
+// var pockets = {chapstick: 1, wallet: 1, keys: 5, pens: 2, hundreds: 1};
+// var backpack = {books: 3, devices: 1, pencils: 2, notebooks: 3, binders: 1}
 
-matchingPair(cash, pockets);
-matchingPair(backpack, cash);
+// matchingPair(cash, pockets);
+// matchingPair(backpack, cash);
 
 
 
