@@ -5,14 +5,21 @@
 // 3. Compare the lengths of each element to each other 
 // 4. Return the element with the greatest length
 
-var longest = ""
+var length = 0;
+var longest = "";
 
 function longestWord(array) {
-  for (var index = 0; index < array.length; index ++) {
-    if (array[index].length > array[index+1].length) console.log(array[index]);
+  for (index = 0; index < array.length; index++) {
+    if (array[index].length > length) {
+      length = array[index].length;
+      longest = array[index];
+    }
   }
+  return longest;
 }
 
-var ourArray = ["cat", "wolf", "rabbit", "chicken"]
+var ourArray = ["wolf", "cat","chicken", "rabbit"];
 
-longestWord(ourArray)
+console.log(longestWord(ourArray));
+
+
