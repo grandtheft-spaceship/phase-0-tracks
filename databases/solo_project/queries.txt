@@ -1,0 +1,52 @@
+1. Display the information in one table (either table is fine).
+
+sqlite> SELECT * FROM tools;
+1|Slotted Screwdriver|Screwdriver|3|false|8
+2|Ball Pein|Hammer|1|false|7
+3|Dremel|Rotary|2|true|3
+4|Belt Sander|Sander|1|true|6
+5|Lathe|Rotary|1|true|7
+6|Bandsaw|Saw|1|true|6
+7|Pipe Wrench|Wrench|2|false|5
+8|Adjustable Wrench|Wrench|1|false|4
+
+2. Update an item that meets some condition (you can choose a condition that makes sense).
+
+sqlite> UPDATE tools SET builder_id=4 WHERE name="Lathe";
+
+3. Display the information in both tables using one query.
+
+sqlite> SELECT * FROM tools, builders WHERE tools.builder_id = builders.id;
+1|Slotted Screwdriver|Screwdriver|3|false|8|8|Timofey Goldtein|Male|Clockmaker|3|false
+2|Ball Pein|Hammer|1|false|7|7|Bob Schultz|Male|Playgrounds|10|true
+3|Dremel|Rotary|2|true|3|3|Beth Johanssen|Female|Prop Maker|15|false
+4|Belt Sander|Sander|1|true|6|6|Richard Forte|Male|Carpenter|5|false
+5|Lathe|Rotary|1|true|4|4|Ellen Roberts|Female|Robotics|13|true
+6|Bandsaw|Saw|1|true|6|6|Richard Forte|Male|Carpenter|5|false
+7|Pipe Wrench|Wrench|2|false|5|5|Jackie Shultz|Male|Automaker|20|false
+8|Adjustable Wrench|Wrench|1|false|4|4|Ellen Roberts|Female|Robotics|13|true
+
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+sqlite> SELECT builders.name, tools.name FROM tools JOIN builders ON tools.builder_id = builders.id;
+Timofey Goldtein|Slotted Screwdriver
+Bob Schultz|Ball Pein
+Beth Johanssen|Dremel
+Richard Forte|Belt Sander
+Ellen Roberts|Lathe
+Richard Forte|Bandsaw
+Jackie Shultz|Pipe Wrench
+Ellen Roberts|Adjustable Wrench
+
+5. Delete an item that meets some condition (you can choose a condition that makes sense).
+
+sqlite> DELETE FROM builders WHERE name="Timofey Goldtein";
+
+sqlite> SELECT * FROM builders;
+3|Beth Johanssen|Female|Prop Maker|15|false
+4|Ellen Roberts|Female|Robotics|13|true
+5|Jackie Shultz|Male|Automaker|20|false
+6|Richard Forte|Male|Carpenter|5|false
+7|Bob Schultz|Male|Playgrounds|10|true
+
+6. 
