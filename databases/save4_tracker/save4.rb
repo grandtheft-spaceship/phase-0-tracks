@@ -85,6 +85,52 @@ end
 # delete_item(db, "Guitar")
 # print_list(db)
 
+############# USER INTERFACE #############
+
+puts "Hello! Welcome to Save4; a tracker-type application that allows you to list items you wish to purchase and keep track of your current progress in reaching that goal."
+
+puts "Would you like to view your list, update a goal, create a new goal, or delete a goal? (Please type either 'view', 'update', 'create', 'delete')"
+
+user_reply = gets.chomp
+
+  if user_reply == "view"
+    print_list(db)
+  elsif user_reply == "update"
+    puts db.execute(<<-SQL
+      SELECT name
+      FROM savings
+      SQL
+    )
+
+    puts "Please enter the name of the item you would like to update"
+    item_name = gets.chomp
+    puts "Please enter the amount you are adding to save for this item."
+    deposit_amount = gets.chomp
+    deposit_amount = deposit_amount.to_i
+
+    make_deposit(db, item_name, deposit_amount)
+    print_list(db)
+  elsif user_reply == "create"
+    puts "Please enter the name of the item you would like to track"
+    item_name = gets.chomp
+    puts "Please enter the total cost of the item"
+    total_cost = gets.chomp
+    puts "If any, please enter the amount you have saved, thusfar, for this item. If none, please enter 0"
+    total_savings = gets.chomp
+    puts "Please enter the date of when you would like to purchase the item by. Please use the following format 'YYYY-MM-DD'"
+    purchase_date = gets.chomp
+
+    create_new_item(db, item_name, total_cost, total_savings, purchase_date)
+    print_list(db)
+  elsif user_reply == 'delete'
+    puts "Please enter the name of the item you wish to delete"
+    item_name = gets.chomp
+
+    delete_item(db, item_name)
+    print_list(db)
+  else
+    puts "Please enter a valid response"
+  end
 
 
 
