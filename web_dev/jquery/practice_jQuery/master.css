@@ -1,0 +1,86 @@
+* {
+	font-family: 'Bungee Shade', cursive;
+	color: white;
+}
+
+body {
+	border: 3px solid white;
+	display: inline-block;
+	width: 90%;
+	height:500px;
+	position: relative;
+	background-color: black;
+	left: 5%;
+	top: 30px;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+p {
+	font-size: 20px;
+}
+
+h1, p {
+	text-align: center;
+	width: 550px;
+	position: relative;
+	left: 20%;
+}
+
+#player1 {
+	background-color: white;
+	width: 20px;
+	height: 100px;
+	display: inline-block;
+	position: absolute;
+	float: left;
+	left: 20px;
+}
+
+#player2 {
+	background-color: white;
+	width: 20px;
+	height: 100px;
+	display: inline-block;
+	position: absolute;
+	float: right;
+	right: 20px;
+}
+
+#ball {
+	border: 1px solid white;
+	background-color: white;
+	width: 15px;
+	height: 15px;
+	background-color: white;
+	display: inline-block;
+	position: absolute;
+	left: 45%;
+}
+
+#halfcourt {
+	text-align: center;
+	border-right: 3px dashed white;
+	width: 1px;
+	height: 500px;
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	bottom: 0%;
+}
+
+#click_here {
+	font-size: 25px;
+	display: inline-block;
+	position: absolute;
+	left: 60%;
+	bottom: 100px;
+}
+
+
+
+
+
+
