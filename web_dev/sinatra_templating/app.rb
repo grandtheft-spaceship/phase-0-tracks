@@ -25,3 +25,15 @@ post '/students' do
 end
 
 # add static resources
+
+get '/housing' do
+  @room_mates = []
+  idx = 1
+  4.times do |student|
+  students = db.execute("select * from students where id=#{idx}")
+  @room_mates << students
+  idx += 1
+  end
+  @room_mates
+  erb :housing
+end
