@@ -1,0 +1,14 @@
+<html>
+<head>
+  <title>Housing</title>
+</head>
+<body>
+  <h2>Roommates:</h2>
+  <ul>
+    <% @room_mates.each do |student| %>
+    <% idx = 0%>
+      <li><%= student[idx]['name']%>, <%=student[idx]['age'] %></li>
+    <% end %>
+  </ul>
+</body>
+</html>
