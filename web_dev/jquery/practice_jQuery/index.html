@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Pong</title>
+	<link rel="stylesheet" type="text/css" href="master.css">
+	<link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+</head>
+<body>
+	<h1>jQUERY PONG</h1>
+		<p>A jQuery approach to a classic game</p>
+	<div id="player1"></div>
+	<div id="ball"></div>
+	<div id="halfcourt"></div>
+	<div id="player2"></div>
+	<div id="click_here">Click Here</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+	</script>
+	<script>
+	function blinker() {
+	  $("#click_here").fadeOut(500);
+	  $("#click_here").fadeIn(500);
+	};
+
+	$("#click_here").click(function() {
+	  $("h1").fadeOut(300);
+	  $("p").fadeOut(300);
+	  $(this).fadeOut(300);
+	});
+
+	function slider1() {
+		$("#player1").mouseover(function() {
+    	$(this).animate({marginTop: 400});
+    	$(this).animate({marginTop: 0});
+		});
+	};
+
+	function slider2() {
+		$("#player2").mouseover(function() {
+    	$(this).animate({marginTop: 400});
+    	$(this).animate({marginTop: 0});
+		});
+	};	
+
+	function moveBall() {
+		$("#ball").mouseover(function() {
+			$(this).animate({left: '+=100', top: '+=100'});
+			$(this).animate({right: '+=100', bottom: '+=100'});
+		});
+	};
+
+	setInterval(blinker, 1000);	
+	setInterval(slider1, 1000);
+	setInterval(slider2, 1000);
+	setInterval(moveBall, 1000);
+
+	</script>
+</body>
+</html>
