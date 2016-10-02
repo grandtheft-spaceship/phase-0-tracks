@@ -22,8 +22,6 @@
 	  $("#click_here").fadeIn(500);
 	};
 
-	setInterval(blinker, 1000);	
-
 	$("#click_here").click(function() {
 	  $("h1").fadeOut(300);
 	  $("p").fadeOut(300);
@@ -32,20 +30,29 @@
 
 	function slider1() {
 		$("#player1").mouseover(function() {
-    $(this).animate({marginTop: 400});
-    $(this).animate({marginTop: 0});
+    	$(this).animate({marginTop: 400});
+    	$(this).animate({marginTop: 0});
 		});
 	};
 
 	function slider2() {
 		$("#player2").mouseover(function() {
-    $(this).animate({marginTop: 400});
-    $(this).animate({marginTop: 0});
+    	$(this).animate({marginTop: 400});
+    	$(this).animate({marginTop: 0});
 		});
 	};	
 
+	function moveBall() {
+		$("#ball").mouseover(function() {
+			$(this).animate({left: '+=100', top: '+=100'});
+			$(this).animate({right: '+=100', bottom: '+=100'});
+		});
+	};
+
+	setInterval(blinker, 1000);	
 	setInterval(slider1, 1000);
 	setInterval(slider2, 1000);
+	setInterval(moveBall, 1000);
 
 	</script>
 </body>
